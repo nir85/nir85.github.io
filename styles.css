@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 100vh;
+}
+
+.sidebar{
+  margin-left: 15px
+}
+
+
+/* Feature Overlay */
+.overlay-container{
+  background-color: #555;
+  width: 150px;
+  color: #fff;
+  text-align: center;
+  border-radius: 1px;
+  padding: 2px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.overlay-container #feature-additional-info::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Controls */
+
+.ol-control button{
+  background-color: rgba(30, 115, 65, 0.4)
+}
+
+.ol-control button:hover{
+  background-color: rgba(30, 115, 65, 1)
+}
+
+.ol-control button:focus{
+  background-color: rgba(30, 115, 65, 0.8)
+}
+
+.ol-zoom{
+  /*margin-left: 10px*/
+  left: unset;
+  right: 15px
+}
+
+.ol-zoom .ol-zoom-in{
+  border-radius: 15%
+}
+
+.ol-zoom .ol-zoom-out{
+  border-radius: 15%
+}
+
+.ol-overviewmap{
+  bottom: 60px
+}
+
+.btn-success{
+  background-color: rgb(4, 138, 66);
+}
+
+.btn-default{
+  background-color: rgb(255, 255, 255);
+}
