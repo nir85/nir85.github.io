@@ -130,8 +130,9 @@ function init(){
 		})
 		
 	})
-const drawInteraction = new ol.interaction.Draw({
-type: 'LineString', freehand: true
-})
-map.addInteraction(drawInteraction);
+	const drawInteraction = new ol.interaction.Draw({
+		type: 'LineString'
+		//freehand: true
+	})
+	map.addInteraction(drawInteraction);
 }
