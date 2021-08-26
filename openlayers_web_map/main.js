@@ -131,7 +131,8 @@ function init(){
 		
 	})
 	const drawInteraction = new ol.interaction.Draw({
-		type: 'LineString'
+		source: ZoneNoFly.getSource(),
+                type: 'LineString'
 		//freehand: true
 	})
 	map.addInteraction(drawInteraction);
