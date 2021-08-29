@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers web map</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css">
+</head>
+
+<body>
+    <div class='grid-container'>
+        <div class='grid-2'>
+            <div id='js-map' class='map'></div>
+        </div>
+        <div class='grid-1'>
+            <div class='sidebar'>
+                <h2>Base Layers</h2>
+                <input type='radio' name='baselayerRadioButton' value='StamenTerrain' checked>Stamen Terrain<br>
+                <input type='radio' name='baselayerRadioButton' value='OSMStandard'>OSM Standard<br>
+                <input type='radio' name='baselayerRadioButton' value='OSMHumanitarian'>OSM Humanitarian<br><br>
+                <h2>Draw Trajectory</h2>
+                <input type="button" id="interaction_type_draw" name="interaction_type" value="draw">
+                <input type="button" id="" name="" value="1">
+                <input type="button" id="" name="" value="2">
+                <input type="button" id="" name="" value="3">
+                <input type="button" id="" name="" value="4">
+                <input type="button" id="" name="" value="5"><br><br>
+                <h2>Choose Your Drone</h2>
+                <FORM>
+                    <SELECT name="nom" size="1">
+                        <OPTION>lundi
+                        <OPTION>mardi
+                        <OPTION>mercredi
+                        <OPTION>jeudi
+                        <OPTION>vendredi
+                    </SELECT>
+                </FORM>
+            </div>
+        </div>
+        
+    </div>
+	<div class='overlay-container'>
+		<span class='overlay-text' id='feature-name'></span><br>
+		<span class='overlay-text' id='feature-additional-info'></span><br>
+	</div>
+    <script src="./main.js "></script>
+    <script src="./libs/v6.6.1-dist/ol.js"></script>
+
+</body>
+
+</html>
