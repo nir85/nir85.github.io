@@ -1,5 +1,3 @@
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,23 +18,28 @@
                 <input type='radio' name='baselayerRadioButton' value='StamenTerrain' checked>Stamen Terrain<br>
                 <input type='radio' name='baselayerRadioButton' value='OSMStandard'>OSM Standard<br>
                 <input type='radio' name='baselayerRadioButton' value='OSMHumanitarian'>OSM Humanitarian<br><br>
-                <h2>Draw Trajectory</h2>
-                <input type="button" id="interaction_type_draw" name="interaction_type" value="draw">
-                <input type="button" id="" name="" value="1">
-                <input type="button" id="" name="" value="2">
-                <input type="button" id="" name="" value="3">
-                <input type="button" id="" name="" value="4">
-                <input type="button" id="" name="" value="5"><br><br>
+                <h2>Draw Zone</h2>
+				<label>Geometry type</label><br><br>
+				<select id="geom_liste" size="1">                    
+					<option value="choose">choose</option>
+                    <option value="LineString">LineString</option>
+                    <option value="Polygone">Polygone</option>
+                </select><br><br>
+                <input type="button" id="LineString" name="LineString" value="LineString">
+				<input type="button" id="Polygone" name="Polygone" value="Polygone">
+                <input type="button" id="" name="" value="end draw">
+                <input type="button" id="" name="" value="reset draw"><br><br>
                 <h2>Choose Your Drone</h2>
-                <FORM>
-                    <SELECT name="nom" size="1">
-                        <OPTION>lundi
-                        <OPTION>mardi
-                        <OPTION>mercredi
-                        <OPTION>jeudi
-                        <OPTION>vendredi
-                    </SELECT>
-                </FORM>
+                <form>
+                    <select name="uav" id="uav_select" size="1">
+                        <option>unmanned aerial vehicle</option>
+                        <option value="drone1">Drone 1</option>
+                        <option value="drone2">Drone 2</option>
+                        <option value="drone3">Drone 3</option>
+                        <option value="drone4">Drone 4</option>
+                        <option value="drone5">Drone 5</option>
+                    </select>
+                </form>
             </div>
         </div>
         
