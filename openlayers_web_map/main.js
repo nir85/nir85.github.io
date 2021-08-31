@@ -156,25 +156,39 @@ function init(){
         source: vector_layer.getSource(),
         type: 'LineString'
     })
-    map.addInteraction(drawInteraction);*/
+    map.addInteraction(drawInteraction);
    
     
     const controlButton = document.querySelector('.sidebar > input[value=draw]');
     controlButton.addEventListener('click', function(e){
         addDrawInteraction();
-    });
+    });*/
 
-    var drawinteraction;
+var drawinteraction;
+var geom_liste = document.getElementById("geom_liste");
+var geom_type;
+	geom_liste.addEventListener('change', function(e) {
+		geom_type = geom_liste.options[geom_liste.selectedIndex].value;
+		//map.removeInteraction(drawinteraction);
+		addDrawInteraction();
+	});
+
     function addDrawInteraction() {
-        // remove other interactions
+if(geom_type!="choose"){
+	//console.log(geom_type);
+	drawinteraction = new ol.interaction.Draw({
+	source: vector_layer.getSource(),
+	type: geom_type
+	});
+}        
+// remove other interactions
        // map.removeInteraction(select_interaction);
-        
         // create the interaction
-        drawinteraction = new ol.interaction.Draw({
-          source: vector_layer.getSource(),
-          type: 'LineString'
+        //drawinteraction = new ol.interaction.Draw({
+          //source: vector_layer.getSource(),
+          //type: 'LineString'
           //type: /** @type {ol.geom.GeometryType} */ ($geom_type.val())
-        });
+        //});
           // add it to the map
         map.addInteraction(drawinteraction);
       
