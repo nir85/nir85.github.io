@@ -169,7 +169,7 @@ var geom_liste = document.getElementById("geom_liste");
 var geom_type;
 	geom_liste.addEventListener('change', function(e) {
 		geom_type = geom_liste.options[geom_liste.selectedIndex].value;
-		//map.removeInteraction(drawinteraction);
+		map.removeInteraction(drawinteraction);
 		addDrawInteraction();
 	});
 
