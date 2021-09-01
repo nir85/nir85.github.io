@@ -175,7 +175,8 @@ function init(){
             let parser = new ol.format.GeoJSON();
             //let drawnFeatures = parser.writeFeaturesObject([e.geometry.coordinates]);
             let drawnFeatures = parser.writeFeatures([e.feature]);
-            console.log(drawnFeatures);
+            //console.log(drawnFeatures);
+            window.confirm(drawnFeatures);
         })
       
         // when a new feature has been drawn...
