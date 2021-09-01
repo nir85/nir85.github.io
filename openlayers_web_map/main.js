@@ -164,9 +164,11 @@ function init(){
     function addDrawInteraction() {
 		if(geom_type!="choose"){
 			//console.log(geom_type);
+let geometryFunction;
+if(geom_type==='Square'){geom_type='Circle'; geometryFunction = createRegularPolygon(4);}else if(geom_type ==='Box'){ geom_type ='Circle'; geometryFunction = createBox() ;} 
 			drawinteraction = new ol.interaction.Draw({
 				source: vector_layer.getSource(),
-				type: geom_type
+				type: geom_type, geometryFunction: geometryFunction
 			});
 		}
         map.addInteraction(drawinteraction);
