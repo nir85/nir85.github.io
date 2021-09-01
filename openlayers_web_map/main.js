@@ -165,7 +165,7 @@ function init(){
 		if(geom_type!="choose"){
 			//console.log(geom_type);
 let geometryFunction;
-if(geom_type==='Square'){geom_type='Circle'; geometryFunction = createRegularPolygon(4);}else if(geom_type ==='Box'){ geom_type ='Circle'; geometryFunction = createBox() ;} 
+if(geom_type==='Square'){geom_type='Circle'; geometryFunction = ol.interaction.Draw.createRegularPolygon(4);}else if(geom_type ==='Box'){ geom_type ='Circle'; geometryFunction = ol.interaction.Draw.createBox();} 
 			drawinteraction = new ol.interaction.Draw({
 				source: vector_layer.getSource(),
 				type: geom_type, geometryFunction: geometryFunction
