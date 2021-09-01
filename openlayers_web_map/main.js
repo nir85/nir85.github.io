@@ -176,7 +176,7 @@ function init(){
             //let drawnFeatures = parser.writeFeaturesObject([e.geometry.coordinates]);
             let drawnFeatures = parser.writeFeatures([e.feature]);
             //console.log(drawnFeatures);
-            window.confirm(drawnFeatures.features[0].geometry.coordinates);
+            window.confirm(drawnFeatures);
         })
       
         // when a new feature has been drawn...
