@@ -178,7 +178,7 @@ if(geom_type==='Square'){geom_type='Circle'; geometryFunction = ol.interaction.D
             //let drawnFeatures = parser.writeFeaturesObject([e.geometry.coordinates]);
             let drawnFeatures = parser.writeFeatures([e.feature]);
             //console.log(drawnFeatures);
-            window.confirm(drawnFeatures);
+            //window.confirm(drawnFeatures);
 const overlaycoord = document.getElementById('coordinates');
 	overlaycoord.innerHTML = drawnFeatures;
         })
