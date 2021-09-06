@@ -175,6 +175,7 @@ function init(){
 	var reset_draw = document.getElementById("reset_draw");
 	reset_draw.addEventListener('click', function(e) {
 		vector_layer.getSource().clear();
+                drawinteraction.setActive(false);
 	});
 	
     function addDrawInteraction() {
