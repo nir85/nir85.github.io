@@ -311,21 +311,23 @@ function init(){
         geom_liste.options[0].selected=true;
 	});
 	
-    function addDrawInteraction() {
-		if(geom_type!="choose"){
+function addDrawInteraction() {
+	if(geom_type!="choose"){
             let geometryFunction;
             if(geom_type==='Square'){
                 geom_type='Circle';
                 geometryFunction = ol.interaction.Draw.createRegularPolygon(4);
-            }else if(geom_type ==='Box'){
+	    }else if(geom_type ==='Box'){
                 geom_type ='Circle';
                 geometryFunction = ol.interaction.Draw.createBox();
-            } 
-			drawinteraction = new ol.interaction.Draw({
-				source: vector_layer.getSource(),
-				type: geom_type, geometryFunction: geometryFunction
-			});
-		}
+	    } 
+	drawinteraction = new ol.interaction.Draw({
+		source: vector_layer.getSource(),
+		type: geom_type, geometryFunction: geometryFunction
+	});
+	}else{
+            drawinteraction.setActive(false);
+        }
         map.addInteraction(drawinteraction);
 
         drawinteraction.on('drawend', function(e){
