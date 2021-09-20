@@ -151,6 +151,7 @@ function init(){
 		})
     })
     map.addLayer(AeroDanger);
+	console.log(AeroDanger.features[0]);
     var checkboxAeroDanger = document.querySelector('input[id="AeroDanger"]');
 	checkboxAeroDanger.onchange=function(e) {
 		if(checkboxAeroDanger.checked===false) {map.removeLayer(AeroDanger);}
