@@ -137,7 +137,7 @@ function init(){
 
 	
 
-    const AeroDanger = new ol.layer.VectorImage({
+    const AeroDanger = new ol.source.Vector({
         source: new ol.source.Vector({
             url:'./data/vector_data/AeroDanger.geojson',
             format: new ol.format.GeoJSON()
@@ -151,9 +151,9 @@ function init(){
 		})
     })
     map.addLayer(AeroDanger);
-	window.alert("ok");
+	/*window.alert("ok");
 	window.alert(AeroDanger.features[0]);
-	window.alert("ok");
+	window.alert("ok");*/
     var checkboxAeroDanger = document.querySelector('input[id="AeroDanger"]');
 	checkboxAeroDanger.onchange=function(e) {
 		if(checkboxAeroDanger.checked===false) {map.removeLayer(AeroDanger);}
