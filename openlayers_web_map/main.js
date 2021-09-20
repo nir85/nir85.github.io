@@ -367,6 +367,4 @@ function addDrawInteraction() {
           event.feature.setId(id);
         });*/
     }
-
-    
 }
