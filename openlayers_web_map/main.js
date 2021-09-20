@@ -137,7 +137,7 @@ function init(){
 
 	
 
-    const AeroDanger = new ol.source.Vector({
+    const AeroDanger = new ol.layer.VectorImage({
         source: new ol.source.Vector({
             url:'./data/vector_data/AeroDanger.geojson',
             format: new ol.format.GeoJSON()
