@@ -1,0 +1,105 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", sans-serif;
+}
+  
+  .sidepanel  {
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	height: 100%;;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	/*padding-top: 60px;*/
+	
+  }
+  
+  .sidepanel a {
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+
+  .sidepanel h4 {
+	
+	text-decoration: none;
+	color: #818181;
+	
+  }
+
+  .sidepanel label {
+	text-decoration: none;
+	color: #818181;
+	
+  }
+  
+  .sidepanel a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+	position: absolute;
+	/*top: 0;*/
+	right: 25px;
+	font-size: 36px;
+  }
+  
+  .openbtn {
+	z-index: 1;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	float: right;
+	border: none;
+  }
+  
+  .openbtn:hover {
+	background-color:#444;
+  }
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 80vw 20vw;
+	grid-template-rows: 100vh;
+}
+.sidebar{
+	margin-left: 15px;
+}
+
+/* Feature Overlay */
+.overlay-container{
+	background-color: #555;
+	width: 150px;
+	color: #fff;
+	text-align: center;
+	border-radius: 1px;
+	padding: 2px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -80px;
+}
+
+.overlay-container #feature-additional-info::after{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
