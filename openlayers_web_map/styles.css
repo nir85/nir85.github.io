@@ -17,7 +17,7 @@ body{
 	background-color: #111;
 	overflow-x: hidden;
 	transition: 0.5s;
-	/*padding-top: 60px;*/
+	
 	
   }
   
@@ -25,22 +25,34 @@ body{
 	padding: 0px 0px 0px 0px;
 	text-decoration: none;
 	font-size: 25px;
-	color: #818181;
+	color: white;
 	display: block;
 	transition: 0.3s;
   }
 
   .sidepanel h4 {
-	
+	padding-left: 20px;
 	text-decoration: none;
-	color: #818181;
+	color: white;
+	
+  }
+
+  .sidepanel p {
+	padding-left: 20px;
+	text-decoration: none;
+	color: white;
+	
+  }
+
+.sidepanel form {
+	padding-left: 20px;
 	
   }
 
   .sidepanel label {
 	text-decoration: none;
-	color: #818181;
-	
+	color: white;
+	padding-left: 0px;
   }
   
   .sidepanel a:hover {
@@ -63,6 +75,20 @@ body{
 	padding: 10px 15px;
 	float: right;
 	border: none;
+  }
+  .divopnbtn{
+	background-color: #111;
+	height: 47px;
+  }
+  .titleproj{
+	text-decoration: none;
+	color: white;
+	float: left;
+	font-size: 30px;
+    margin-top: 4px;
+    margin-left: 20px;
+    margin-bottom: 0;
+	font-family: "Bitstream Vera Serif bold";
   }
   
   .openbtn:hover {
