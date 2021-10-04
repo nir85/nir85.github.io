@@ -13,24 +13,26 @@
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <h4>Draw Zone</h4>
+  <form>
   <label>Geometry type</label><br>
   <select id="geom_liste" size="1">                    
         <option id="0" value="choose" selected>choose</option>
         <option id="1" value="LineString">LineString</option>
         <option id="2" value="Polygon">Polygon</option>
-        <option id="3" value="Circle">Circle</option>
-        <option id="4" value="Square">Square</option>
-        <option id="5" value="Box">Box</option>
+        <option id="3" value="Square">Square</option>
+        <option id="4" value="Box">Box</option>
   </select><br><br>
   <input type="button" id="end_draw" name="" value="end draw">
   <input type="button" id="reset_draw" value="reset draw"><br><br>
   <button id = "find-me">Montrer ma localisation</button>
 	<p id = "status"></p>
-	<a id = "map-link" target="_blank"></a>
+	</form>
 <h4>Base Layers</h4>
+<form>
   <input type='radio' name='baselayerRadioButton' value='StamenTerrain' checked><label>Stamen Terrain</label><br>
   <input type='radio' name='baselayerRadioButton' value='OSMStandard'><label>OSM Standard</label><br>
   <input type='radio' name='baselayerRadioButton' value='OSMHumanitarian'><label>OSM Humanitarian</label>
+ </form>
   <h4>Zones</h4>
   <form>
       <input type="checkbox" id="CountryBorders" name="CountryBorders" value="CountryBorders" checked>
@@ -51,10 +53,12 @@
                 
   
 </div>
+<div class='divopnbtn'>
+  <p class="titleproj">WebMap</p>
+  <button class="openbtn" onclick="openNav()">☰</button>
 
-<div id='js-map' class='map'>
-  <button class="openbtn" onclick="openNav()">☰</button>  
 </div>
+<div id='js-map' class='map'></div>
 
 
 <script>
