@@ -452,7 +452,7 @@ function init(){
             });
             map.addLayer(vectorLayer);
 			map.getView().setCenter([longitude, latitude]);
-			map.getView().setZoom(9);
+			map.getView().setZoom(11);
                         document.getElementById("mySidepanel").style.width = "0";
 			status.textContent = '';
 		}
