@@ -451,6 +451,10 @@ function init(){
                 })
             });
             map.addLayer(vectorLayer);
+		map.setView(new ol.View({
+            		center: [longitude, latitude],
+            		zoom: 4
+		}));
 			status.textContent = '';
 		}
 
