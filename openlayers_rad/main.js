@@ -135,9 +135,8 @@ function init(){
 	const geolocation = new ol.Geolocation({
   		// enableHighAccuracy must be set to true to have the heading value.
   		trackingOptions: {
-			enableHighAccuracy: true,
-  		},
-  		projection: map.getView().getProjection(),
+			enableHighAccuracy: false,
+  		}
 	});
 	
 	const coordinates = geolocation.getPosition();
