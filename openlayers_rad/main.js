@@ -132,7 +132,7 @@ function init(){
 	});
 	
 			var geolocation = new ol.Geolocation({tracking: true,}); 
-			geolocation.on('change', function(evt) {
+			geolocation.once('change', function(evt) {
 			  var precision = geolocation.getAccuracy();
 			  alert(precision);
 			  var position = geolocation.getPosition();
