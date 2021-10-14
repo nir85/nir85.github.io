@@ -129,7 +129,7 @@ function init(){
 			}
 		})
 		
-	})
+	});
 	
 	
 	const geolocation = new ol.Geolocation({
