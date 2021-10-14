@@ -134,7 +134,7 @@ function init(){
 			var geolocation = new ol.Geolocation({tracking: true,}); 
 			geolocation.once('change', function(evt) {
 			  var position = geolocation.getPosition();
-			  alert(position[1] + ' ' + position[0]);
+			  alert('Longitude' + position[1] + ' ' + 'Altitude'+position[0]);
 			});
 			// On alerte si une erreur est trouvée
 			geolocation.on('error', function(erreur) {
