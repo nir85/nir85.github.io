@@ -139,7 +139,4 @@ function init(){
   		}
 	});
 	console.log(geolocation);
-	const coordinates = geolocation.getPosition();
-	console.log(coordinates ? new ol.geom.Point(coordinates));
-
 }
