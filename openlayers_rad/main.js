@@ -133,11 +133,8 @@ function init(){
 	
 			var geolocation = new ol.Geolocation({tracking: true,}); 
 			geolocation.once('change', function(evt) {
-			  var precision = geolocation.getAccuracy();
-			  alert(precision);
 			  var position = geolocation.getPosition();
-			  alert(position[1]);
-				alert(position[0]);
+			  console.log(position[1]' jhgjhg 'position[0]);
 			});
 			// On alerte si une erreur est trouvée
 			geolocation.on('error', function(erreur) {
