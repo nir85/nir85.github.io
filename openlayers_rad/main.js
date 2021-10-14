@@ -131,12 +131,18 @@ function init(){
 		
 	});
 	
+			var geolocation = new ol.Geolocation({tracking: true,}); 
+			geolocation.on('change', function(evt) {
+			  var precision = geolocation.getAccuracy();
+			  console.log(precision);
+			  var position = geolocation.getPosition();
+			  console.log(position[1]);
+			  console.log(position[0]);
+			});
+			// On alerte si une erreur est trouvée
+			geolocation.on('error', function(erreur) {
+				alert('Echec de la géolocalisation : ' +erreur.message);       
+			});
 	
-	const geolocation = new ol.Geolocation({
-  		// enableHighAccuracy must be set to true to have the heading value.
-  		trackingOptions: {
-			enableHighAccuracy: true,
-  		}
-	});
-	console.log(geolocation);
+	
 }
