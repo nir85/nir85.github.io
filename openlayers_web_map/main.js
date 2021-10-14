@@ -452,7 +452,7 @@ function init(){
             });
             map.addLayer(vectorLayer);
 		map.setView(new ol.View({
-            		center: [longitude, latitude],
+            		center: [latitude, longitude],
             		zoom: 4
 		}));
 			status.textContent = '';
