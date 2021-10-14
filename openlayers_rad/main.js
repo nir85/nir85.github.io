@@ -138,9 +138,9 @@ function init(){
 			enableHighAccuracy: false,
   		}
 	});
-	
+		console.log(geolocation);
 	const coordinates = geolocation.getPosition();
 	console.log("qsdqsd");
-	console.log(coordinates ? new ol.geom.Point(coordinates);
+	console.log(coordinates ? new ol.geom.Point(coordinates));
 	console.log("qsdqsd");
 }
