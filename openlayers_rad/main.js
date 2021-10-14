@@ -141,5 +141,7 @@ function init(){
 	});
 	
 	const coordinates = geolocation.getPosition();
+	console.log("qsdqsd");
 	console.log(coordinates);
+	console.log("qsdqsd");
 }
