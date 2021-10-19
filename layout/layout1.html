@@ -1,0 +1,84 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers web map</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css">
+</head>
+
+<body>
+    <div class='grid-container'>
+        <div class='grid-2'>
+            <div id='js-map' class='map'></div>
+        </div>
+        <div class='grid-1'>
+            <div class='sidebar'>
+                <h3>Draw Zone</h3>
+				<label>Geometry type</label><br>
+				<select id="geom_liste" size="1">                    
+					<option id="0" value="choose" selected>choose</option>
+                    <option id="1" value="LineString">LineString</option>
+                    <option id="2" value="Polygon">Polygon</option>
+		            <option id="3" value="Circle">Circle</option>
+                    <option id="4" value="Square">Square</option>
+                    <option id="5" value="Box">Box</option>
+                </select><br><br>
+                <input type="button" id="end_draw" name="" value="end draw">
+                <input type="button" id="reset_draw" value="reset draw">
+                <h3>Base Layers</h3>
+                <input type='radio' name='baselayerRadioButton' value='StamenTerrain' checked><label>Stamen Terrain</label><br>
+                <input type='radio' name='baselayerRadioButton' value='OSMStandard'><label>OSM Standard</label><br>
+                <input type='radio' name='baselayerRadioButton' value='OSMHumanitarian'><label>OSM Humanitarian</label>
+                <h3>Zones</h3>
+                <form>
+                    <input type="checkbox" id="CountryBorders" name="CountryBorders" value="CountryBorders" checked>
+                    <label> CountryBorders</label><br>
+                    <input type="checkbox" id="AeroTMA" name="AeroTMA" value="AeroTMA" checked>
+                    <label> AeroTMA</label><br>
+                    <input type="checkbox" id="AeroDanger" name="AeroDanger" value="AeroDanger" checked>
+                    <label> AeroDanger</label><br>
+                    <input type="checkbox" id="AeroShooting" name="AeroShooting" value="AeroShooting" checked>
+                    <label> AeroShooting</label><br>
+                    <input type="checkbox" id="AeroRestricted" name="AeroRestricted" value="AeroRestricted" checked>
+                    <label> AeroRestricted</label><br>
+                    <input type="checkbox" id="AeroSector" name="AeroSector" value="AeroSector" checked>
+                    <label> AeroSector</label><br>
+                    <input type="checkbox" id="AeroProhibited" name="AeroProhibited" value="AeroProhibited" checked>
+                    <label> AeroProhibited</label>
+                </form>
+                
+                
+                <h3>Choose Your Drone</h3>
+                <form>
+                    <select name="uav" id="uav_select" size="1">
+                        <option>unmanned aerial vehicle</option>
+                        <option value="drone1">Drone 1</option>
+                        <option value="drone2">Drone 2</option>
+                        <option value="drone3">Drone 3</option>
+                        <option value="drone4">Drone 4</option>
+                        <option value="drone5">Drone 5</option>
+                    </select>
+                </form>
+            </div><br>
+            <div id='coordinates' ></div>
+        </div>
+        
+    </div>
+	<div class='overlay-container'>
+		<span class='overlay-text' id='feature-name'></span><br>
+		<span class='overlay-text' id='feature-additional-info'></span><br>
+	</div>
+    <div id='popup-container'>
+        <p id='popup-coordinates'></p>
+    </div>
+    <script src="./main.js "></script>
+    <script src="./data/vector_data/features.js"></script>
+    <script src="./libs/v6.6.1-dist/ol.js"></script>
+    <script src="./libs/turf.min.js"></script>
+</body>
+
+</html>

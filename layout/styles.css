@@ -1,0 +1,44 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+  
+ 
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 7vh 86vh 7vh;
+}
+
+
+.sidepanel  {
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	height: 86vh;
+	right: 0;
+	background-color: transparent;
+	overflow-x: hidden;
+	float: right;
+	padding-top: 15vh;
+	padding-left: 2vh;
+	
+  }
+  
+ /* .sidepanel a {
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	transition: 0.3s;
+  }*/
+  
+ .grid-3{
+	background-color:green;
+	justify-content: center!important;
+ }

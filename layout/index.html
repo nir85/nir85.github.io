@@ -1,0 +1,134 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers web map</title>
+	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class='grid-container' style="background-color:red">
+        <div class='grid-1' style="background-color:green"></div>
+		<div class='grid-2' style="background-color:white">  
+			<div id="zones" class="sidepanel">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="CountryBorders" name="CountryBorders" value="CountryBorders" checked>
+					<label class="form-check-label">CountryBorders</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="AeroTMA" name="AeroTMA" value="AeroTMA" class="form-check-input" checked>
+					<label class="form-check-label">AeroTMA</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="AeroDanger" name="AeroDanger" value="AeroDanger" class="form-check-input" checked>
+					<label class="form-check-label">AeroDanger</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="AeroShooting" name="AeroShooting" value="AeroShooting" class="form-check-input" checked>
+					<label class="form-check-label">AeroShooting</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="AeroRestricted" name="AeroRestricted" value="AeroRestricted" class="form-check-input" checked>
+					<label class="form-check-label">AeroRestricted</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="AeroSector" name="AeroSector" value="AeroSector" class="form-check-input" checked>
+					<label class="form-check-label">AeroSector</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="AeroProhibited" name="AeroProhibited" value="AeroProhibited" class="form-check-input" checked>
+					<label class="form-check-label">AeroProhibited</label>
+				</div>
+				<a href="javascript:void(0)" class="closebtn btn btn-primary btn-sm btn-block" onclick="closeNav()">Close</a>
+			</div>
+			<div id="layers" class="sidepanel">
+				<div class="form-check">
+					<input type="radio" name='baselayerRadioButton' class="form-check-input" value='StamenTerrain' checked>
+					<label class="form-check-label">Stamen Terrain</label>
+				</div>
+				<div class="form-check">
+					<input type="radio" name='baselayerRadioButton' class="form-check-input" value='OSMStandard'>
+					<label class="form-check-label">OSM Standard</label>
+				</div>
+				<div class="form-check">
+					<input type="radio" name='baselayerRadioButton' class="form-check-input" value='OSMHumanitarian'>
+					<label class="form-check-label">OSM Humanitarian</label>				
+				</div>				
+				<a href="javascript:void(0)" class="closebtn btn btn-primary btn-sm btn-block" onclick="closeNav()">Close</a>
+			</div>
+			<div id="draw" class="sidepanel">
+				<form>
+					<label>Geometry type</label><br>
+					<select id="geom_liste" size="1">                    
+						  <option id="0" value="choose" selected>choose</option>
+						  <option id="1" value="LineString">LineString</option>
+						  <option id="2" value="Polygon">Polygon</option>
+						  <option id="3" value="Square">Square</option>
+						  <option id="4" value="Box">Box</option>
+					</select><br><br>
+					<input type="button" id="end_draw" name="" value="end draw">
+					<input type="button" id="reset_draw" value="reset draw">
+				</form>
+				<a href="javascript:void(0)" class="closebtn btn btn-primary btn-sm btn-block" onclick="closeNav()">Close</a>
+			</div>
+			<div id='js-map' class='map'></div>
+        </div>
+        <div class='grid-3 btn-group btn-group-sm justify-content-center'>
+			<button class="openbtn btn btn-primary" onclick="Zones()">Zones</button>
+			<button class="openbtn btn btn-primary" onclick="Layers()">layers</button>
+			<button class="openbtn btn btn-primary" onclick="Draw()">Draw</button>
+			<button id="find-me" class="btn btn-primary">Location</button>
+		</div>				
+    </div>
+	<script>
+		function Zones() {
+			if(document.getElementById("zones").style.width === ""){
+				document.getElementById("layers").style.width = "";
+				document.getElementById("draw").style.width = "";
+				document.getElementById("zones").style.width = "30vw";
+			}
+			else{
+				document.getElementById("zones").style.width = "";
+			}
+		}
+		
+		function Layers() {
+			if(document.getElementById("layers").style.width === ""){
+				document.getElementById("zones").style.width = "";
+				document.getElementById("draw").style.width = "";
+				document.getElementById("layers").style.width = "30vw";
+			}
+			else{
+				document.getElementById("layers").style.width = "";
+			}
+		}
+
+		function Draw() {
+			if(document.getElementById("draw").style.width === ""){
+				document.getElementById("zones").style.width = "";
+				document.getElementById("layers").style.width = "";
+				document.getElementById("draw").style.width = "30vw";
+			}
+			else{
+				document.getElementById("draw").style.width = "";
+			}
+		}
+		
+		function closeNav() {
+			document.getElementById("zones").style.width = "";
+			document.getElementById("layers").style.width = "";
+			document.getElementById("draw").style.width = "";
+		}
+    </script>
+	<script src="./main.js "></script>
+	<script src="./data/vector_data/features.js"></script>
+	<script src="./libs/v6.6.1-dist/ol.js"></script>
+	<script src="./libs/turf.min.js"></script>
+</body>
+
+</html>
