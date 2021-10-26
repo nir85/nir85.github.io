@@ -1,0 +1,57 @@
+<!-- ne pas utiliser ce code, cf. "EDIT" -->
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers web map</title>
+	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./libs/v6.6.1-dist/ol.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!--²
+<form method="post" action="" >
+    <div id="champs" >
+        <input type="text" name="titre[]" />
+        
+    </div>
+    <script type="text/javascript" >
+        var div = document.getElementById('champs');
+        function addField() {
+            div.innerHTML += '<input type="text" name="titre[]" />' ;
+        }
+    </script>
+    <button type="button" onclick="addField()" >+</button>
+    <input type="submit" />
+</form>*/
+ -->
+ 
+<form method="post" action="" >
+    <div id="champs" >
+        <input type="text" name="titre[]" />
+        <input type="text" name="contenu[]" />
+        <input type="text" name="description[]" />
+        <br>
+    </div>
+    <script type="text/javascript" >
+        var div = document.getElementById('champs');
+        function addInput(nam){
+            var input = document.createElement("input");
+            input.value = name;
+            div.appendChild(input);
+        }
+        function addField() {
+            addInput("titre[]");
+            addInput("contenu[]");
+            addInput("description[]");
+            div.appendChild(document.createElement("br"));
+        }
+    </script>
+    <button type="button" onclick="addField()" >+</button>
+    <input type="submit" />
+</form>
+</body>
+</html>

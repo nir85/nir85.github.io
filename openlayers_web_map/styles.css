@@ -1,0 +1,101 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+  
+ 
+
+.grid-container{
+	display: grid;
+	/*grid-template-columns: 100vw;*/
+	width: 100%;
+	grid-template-rows: 7vh 86vh 7vh;
+}
+
+
+.sidepanel  {
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	height: 86vh;
+	right: 0;
+	background-color: #212529;
+	overflow-x: hidden;
+	float: right;
+	/*padding-top: 15vh;*/
+	/*padding-left: 15px;*/
+
+  }
+ 
+  .sidepanel label {
+	color: white;
+  }
+  .sidepanel p {
+	color: white;
+  }
+  .sidepanel h3 {
+	color: white;
+  }
+  .sidepanel h5 {
+	color: white;
+	padding-left: 2vw;
+  }
+  .sidepanel p {
+	color: white;
+	padding-left: 2vw;
+  }
+
+  form{
+	  padding-left: 2vw;
+	  padding-right: 1vw;
+	}
+
+  #zones {padding-top: 8vh;}
+
+  #layers {padding-top: 8vh;}
+
+  #draw {padding-top: 8vh;}
+
+  #draw_manual {padding-top: 8vh;}
+
+  .form-check{padding-left: 3vw;}
+
+  .x{
+	  padding-left: 2vw;
+	  padding-right: 1vw;
+	}
+
+
+	.titleproj{
+		color: white;
+		font-size: 5vh;
+		/*margin-top: 1vh;*/
+		margin-left: 2vw;
+		font-family: "Bitstream Vera Serif bold";
+	  }
+
+ /* .sidepanel a {
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	transition: 0.3s;
+  }*/
+  
+ /*.grid-3{
+	background-color:green;
+	justify-content: center!important;
+ }*/
+ 
+
+/* @media all and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+}*/
