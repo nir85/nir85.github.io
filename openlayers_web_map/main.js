@@ -325,7 +325,7 @@ function init(){
             document.getElementById("zones").style.width = "";
             document.getElementById("layers").style.width = "";
             document.getElementById("draw").style.width = "";
-            document.getElementById("draw_manual").style.width = "50vw";
+            document.getElementById("draw_manual").style.width = "70vw";
         }
         else{document.getElementById("draw_manual").style.width = "";}
     }
