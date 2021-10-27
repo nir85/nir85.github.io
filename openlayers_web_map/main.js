@@ -301,7 +301,7 @@ function init(){
 
 		function error() {alert('Unable to retrieve your location');}
 		if (!navigator.geolocation) {alert('Geolocation is not supported by your browser');}
-        else {navigator.geolocation.getCurrentPosition(success, error);}
+        else {navigator.geolocation.getCurrentPosition(success, error, {timeout: 50000}););}
 	}
 	document.querySelector('#find-me').addEventListener('click', geoFindMe);
 
